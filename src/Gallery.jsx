@@ -8,7 +8,6 @@ const url = `https://api.unsplash.com/search/photos?client_id=${
 
 const Gallery = () => {
   const {searchTerm} = useGlobalContext();
-  console.log(searchTerm);
 
   // Add state value to array to trigger refetch
   const {isLoading, data, error} = useQuery({
@@ -20,7 +19,6 @@ const Gallery = () => {
     },
   });
 
-  console.log(isLoading, data, error);
   if (isLoading) {
     return (
       <section className="image-container">
